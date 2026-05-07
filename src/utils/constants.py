@@ -1,0 +1,1 @@
+"""Konstantet globale: ngjyrat, madhësitë."""

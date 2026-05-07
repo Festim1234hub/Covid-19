@@ -1,0 +1,1 @@
+"""Konfigurimet globale: paths, konstantet."""
