@@ -64,14 +64,14 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
 with tab1:
     st.subheader("Figura 1: 10 Vendet me Rastet më të Larta")
     plot_bar_chart(df)
-    st.image("outputs/figures/fig1_bar_chart.png", width="stretch")
+    st.image("outputs/figures/fig1_bar_chart.png", use_column_width=True)
     st.info("Franca dhe Gjermania dominojnë me mbi 38 milionë raste secila.")
 
 # ── Tab 2: Pie Chart ─────────────────────────────────────────────
 with tab2:
     st.subheader("Figura 2: Statusi Global i Pacientëve")
     plot_pie_chart(df)
-    st.image("outputs/figures/fig2_pie_chart.png", width="stretch")
+    st.image("outputs/figures/fig2_pie_chart.png", use_column_width=True)
     cfr = df['total_deaths'].sum() / df['total_cases'].sum() * 100
     st.info(f"Nga të gjithë rastet, **{cfr:.2f}%** përfunduan me vdekje.")
 
@@ -79,7 +79,7 @@ with tab2:
 with tab3:
     st.subheader("Figura 3: GDP per Capita vs Vaksinimi")
     plot_scatter(df)
-    st.image("outputs/figures/fig3_scatter_plot.png", width="stretch")
+    st.image("outputs/figures/fig3_scatter_plot.png", use_column_width=True)
     r, p = pearson_gdp_vaccination(df)
     col1, col2 = st.columns(2)
     col1.metric("Pearson r", r)
@@ -90,7 +90,7 @@ with tab3:
 with tab4:
     st.subheader("Figura 4: Shpërndarja e CFR")
     plot_histogram(df)
-    st.image("outputs/figures/fig4_histogram.png", width="stretch")
+    st.image("outputs/figures/fig4_histogram.png", use_column_width=True)
     col1, col2 = st.columns(2)
     col1.metric("CFR Mesatar", f"{df['CFR'].mean():.2f}%")
     col2.metric("CFR Medianë", f"{df['CFR'].median():.2f}%")
@@ -99,7 +99,7 @@ with tab4:
 with tab5:
     st.subheader("Figura 5: K-Means Clustering — 3 Grupe")
     plot_kmeans(df)
-    st.image("outputs/figures/fig5_kmeans.png", width="stretch")
+    st.image("outputs/figures/fig5_kmeans.png", use_column_width=True)
 
     st.markdown("#### Shpërndarja e vendeve sipas grupeve:")
     col1, col2, col3 = st.columns(3)
