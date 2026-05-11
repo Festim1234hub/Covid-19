@@ -60,6 +60,7 @@ covid19-analysis/
 │   └── reports/            # Raportet e gjeneruar
 ├── tests/                  # Unit tests për modulet kryesore
 ├── docs/                   # Dokumentacioni dhe imazhet
+├── app.py                  # Dashboard interaktiv Streamlit
 ├── .gitignore
 ├── requirements.txt
 └── LICENSE
@@ -80,8 +81,11 @@ venv\Scripts\activate       # Windows
 # 3. Instalo varësitë
 pip install -r requirements.txt
 
-# 4. Ekzekuto pipeline-in
-python src/main.py
+# 4. Ekzekuto pipeline-in (gjeneron figurat dhe tabelat)
+python -m src.main
+
+# 5. Hap dashboard-in interaktiv
+streamlit run app.py
 ```
 
 ## 🔧 Libraritë e Përdorura
@@ -90,6 +94,8 @@ python src/main.py
 - **numpy** — llogaritje numerike
 - **matplotlib** & **seaborn** — vizualizim
 - **scikit-learn** — K-Means Clustering, StandardScaler
+- **scipy** — korrelacioni Pearson
+- **streamlit** — dashboard interaktiv
 
 ## 📊 Outputs
 
